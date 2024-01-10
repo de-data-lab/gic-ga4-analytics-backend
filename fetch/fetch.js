@@ -1,6 +1,10 @@
+/**
+ * Creates a subset of reports to be run, runs them, and then uploads them to GCS
+ * 
+ * @param {"daily"|"hourly"|"realtime"} frequency The report's frequency
+ * @returns void
+ */
 function fetchReportsPerProperty(frequency) {
-
-   const startTime = new Date();
 
   let reportsToFetch = reports.filter(report => report.frequency === frequency)
   const storageToken = getStorageToken(); 
@@ -16,11 +20,5 @@ function fetchReportsPerProperty(frequency) {
       }
     })
   })
-
- const endTime = new Date();
-
-  // Calculate and log the execution time
-  const executionTime = endTime - startTime;
-  Logger.log("Execution time: " +( executionTime / 1000) + " seconds");
 
 }

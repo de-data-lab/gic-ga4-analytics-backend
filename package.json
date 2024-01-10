@@ -1,0 +1,7 @@
+{
+    "name": "gic-ga4-analytics-backend",
+    "version": "1.0.0",
+    "scripts": {
+        "sync": "clasp push"
+    }
+}

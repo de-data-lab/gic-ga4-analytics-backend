@@ -1,3 +1,9 @@
 # secrets 
-
 config/config.js
+
+# clasp/GAS files
+.clasp.json
+appsscript.json
+
+# system files
+.DS_Store

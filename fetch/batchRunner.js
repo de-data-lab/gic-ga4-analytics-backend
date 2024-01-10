@@ -1,8 +1,9 @@
-// convert report into Analytics Data Service request and return the request 
-
-/* 
-  Prepares batches of at least 5 reports, runs them, and returns the processed responses as a one-dimensional array.
-*/
+/**
+ * Prepares batches of at least 5 reports, runs them, and returns the processed responses as a one-dimensional array.
+ * @param {*} reports 
+ * @param {*} property 
+ * @returns An array of processed GA4 reports, augmented with a `reportName` and `query` property
+ */
 function prepareBatches(reports, property) {
 
   // create batches of at least 5 converted requests (batchRunReports supports a maximum of 5 requests)
